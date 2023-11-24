@@ -5,7 +5,7 @@ export const MuiAppBar = () => {
         <Toolbar>
            
              <Typography  variant='h6' component='div' sx={{ flexGrow: 1}}>
-                    Tech Eniac Service
+                    React Material Demo
              </Typography>
             
             <Stack direction='row' spacing={2}>

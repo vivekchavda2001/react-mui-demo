@@ -1,11 +1,12 @@
 import { AppBar, Button, Stack, Toolbar, Typography } from '@mui/material'
 export const MuiAppBar = () => {
+  console.log(process.env)
   return (
     <AppBar position='static'>
         <Toolbar>
            
              <Typography  variant='h6' component='div' sx={{ flexGrow: 1}}>
-                    React Material Demo - Pull Request
+                    {process.env.REACT_APP_TITLE}
              </Typography>
             
             <Stack direction='row' spacing={2}>

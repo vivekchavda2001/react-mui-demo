@@ -26,3 +26,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_MATERIAL_10 }}'
           channelId: live
           projectId: react-material-10
+
+        env:
+          REACT_APP_TITLE : '${{ secrets.REACT_APP_TITLE }}'

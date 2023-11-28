@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
+        env:
+          REACT_APP_TITLE: MUI React Demo
         with:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
@@ -26,5 +28,3 @@ jobs:
             npm install
             npm run build
             sudo cp -R build/ /var/www/html/my-react-app/
-          env:
-            REACT_APP_TITLE: MUI React Demo

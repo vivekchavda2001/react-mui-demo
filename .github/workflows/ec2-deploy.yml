@@ -23,3 +23,5 @@ jobs:
             npm install
             npm run build
             sudo cp -R build/ /var/www/html/my-react-app/
+          env:
+            REACT_APP_TITLE: MUI React Demo

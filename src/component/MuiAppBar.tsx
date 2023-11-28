@@ -6,7 +6,7 @@ export const MuiAppBar = () => {
         <Toolbar>
            
              <Typography  variant='h6' component='div' sx={{ flexGrow: 1}}>
-                   Vivek Chavda- From EC2 Git Actions:  {process.env.REACT_APP_TITLE}
+                   Vivek- From EC2 Git Actions:  {process.env.REACT_APP_TITLE}
              </Typography>
             
             <Stack direction='row' spacing={2}>

@@ -18,6 +18,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             echo ${{secrets.USERNAME}}
+            echo ${{secrets.EC2_SSH_KEY}}
+            echo ${{secrets.HOST_DNS}}
             cd /home/ubuntu/my-app/react-mui-demo
             git checkout -- .
             git pull

@@ -3,6 +3,8 @@ name: Remote ssh command
   push:
     branches:
       - main
+env:
+  REACT_APP_TITLE: MUI React Demo
 jobs:
   build:
     name: Build

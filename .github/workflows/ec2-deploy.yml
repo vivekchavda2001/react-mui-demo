@@ -13,7 +13,7 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         env:
-          REACT_APP_TITLE: 'Demo Title From Vivek'
+          REACT_APP_TITLE: '${{ secrets.REACT_APP_TITLE }}'
         with:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}

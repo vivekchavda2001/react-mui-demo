@@ -12,8 +12,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
-        env:
-          REACT_APP_TITLE: '${{ secrets.REACT_APP_TITLE }}'
         with:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
@@ -22,9 +20,11 @@ jobs:
             echo ${{secrets.USERNAME}}
             echo ${{secrets.EC2_SSH_KEY}}
             echo ${{secrets.HOST_DNS}}
+            echo ${{secrets.REACT_APP_TITLE}}
             cd /home/ubuntu/my-app/react-mui-demo
             git checkout -- .
             git pull
             npm install
+            export REACT_APP_TITLE=${{ secrets.REACT_APP_TITLE }}
             npm run build
             sudo cp -R build/ /var/www/html/my-react-app/
